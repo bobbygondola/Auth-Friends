@@ -24,7 +24,7 @@ const Login = props => {
             .then( res => {
                 console.log(res)
                 localStorage.setItem('token', res.data.payload)
-                props.history.push('/FriendsList')
+                props.history.push('/Friends')
             }) 
         setValues({
             username: '',
@@ -33,21 +33,22 @@ const Login = props => {
     }
     return (
         <div>
-            <form onSubmit={login}>
-                Username<input 
+            <form onSubmit={login} className="loginForm">
+                <h3>Login to Friends!</h3>
+                Username: <input 
                     type="text"
                     name="username"
                     value={values.username}
                     onChange={handleChange}
                     />
                     <br />
-                Password<input 
+                Password: <input 
                     type="password"
                     name="password"
                     value={values.password}
                     onChange={handleChange} />
                     <br />
-                    <button >Submit</button>
+                    <button>Submit</button>
             </form>
         </div>
     )
