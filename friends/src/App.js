@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import Login from './Components/Login'
 import Header from './Components/Header'
 import Friends from './Components/Friends'
+import Nav from './Components/Nav'
 import './App.css';
 import PrivateRoute from './PrivateRoute'
 import { Switch, Route, Link } from 'react-router-dom'
@@ -10,6 +11,7 @@ import { Switch, Route, Link } from 'react-router-dom'
 function App() {
   return (
     <div className="App">
+      <Nav />
         <Switch>
           <Route exact path="/" component={Header}/>
           <Route  exact path="/login" component={Login} />

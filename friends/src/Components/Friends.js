@@ -19,9 +19,11 @@ const Friends = () => {
     return (
         <div>
         <div id="introfriends">
-            <h2>Welcome to your Friends List</h2>
-            <p>Add or Delete your friends!</p>
-            <p>Once you delete, theyre gone!</p>
+            <div className="subs">
+            <h2>Welcome to your Biz Cards</h2>
+            <p>Add or Delete Contacts!</p>
+            <p>Keep track of your network!</p>
+            </div>
             <FriendForm />
         </div>
             {friendsList.map(friend => {
